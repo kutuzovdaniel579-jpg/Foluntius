@@ -2,71 +2,77 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foluntius</title>
+  <title>FoLuntius – @me</title>
   <style>
     body {
       margin: 0;
       font-family: sans-serif;
-      background-color: #1e1f22;
+      background-color: #313338;
       color: white;
     }
-    #loading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-size: 2em;
-      background-color: #2b2d31;
+
+    .section {
+      padding: 20px;
     }
-    #login {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+
+    .section h2 {
+      margin-bottom: 10px;
+      color: #b5bac1;
+      font-size: 18px;
+      font-weight: 600;
     }
-    #login input {
+
+    .friend, .server {
       padding: 10px;
-      margin: 10px;
-      border: none;
-      border-radius: 5px;
+      background-color: #2b2d31;
+      margin-bottom: 8px;
+      border-radius: 6px;
     }
-    #login button {
-      padding: 10px 20px;
-      background-color: #5865f2;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
+
+    .placeholder {
+      opacity: 0.6;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-  <div id="loading">FoL-Nuntius laden...</div>
 
-  <div id="login">
-    <h2>Log in bij FoL-Nuntius</h2>
-    <input type="text" placeholder="Gebruikersnaam" id="username" />
-    <input type="password" placeholder="Wachtwoord" id="password" />
-    <button onclick="login()">Inloggen</button>
+  <!-- ONLINE -->
+  <div class="section">
+    <h2>Online vrienden</h2>
+
+    <div class="friend placeholder">Placeholder vriend 1 – Online</div>
+    <div class="friend placeholder">Placeholder vriend 2 – Online</div>
+
   </div>
 
-  <script>
-    setTimeout(() => {
-      document.getElementById("loading").style.display = "none";
-      document.getElementById("login").style.display = "flex";
-    }, 5000);
+  <!-- INACTIEF -->
+  <div class="section">
+    <h2>Inactief</h2>
 
-    function login() {
-      // Simpele login check (geen echte auth)
-      const user = document.getElementById("username").value;
-      if (user.trim() !== "") {
-        window.location.href = "https://kutuzovdaniel579-jpg.github.io/Foluntius/@me";
-      } else {
-        alert("Vul een gebruikersnaam in.");
-      }
-    }
-  </script>
+    <div class="friend placeholder">Placeholder vriend 3 – Inactief</div>
+
+  </div>
+
+  <!-- OFFLINE -->
+  <div class="section">
+    <h2>Offline vrienden</h2>
+
+    <div class="friend placeholder">Placeholder vriend 4 – Offline</div>
+    <div class="friend placeholder">Placeholder vriend 5 – Offline</div>
+    <div class="friend placeholder">Placeholder vriend 6 – Offline</div>
+
+  </div>
+
+  <!-- RECENTE SERVERS -->
+  <div class="section">
+    <h2>Recente servers</h2>
+
+    <div class="server placeholder">Server Placeholder 1</div>
+    <div class="server placeholder">Server Placeholder 2</div>
+    <div class="server placeholder">Server Placeholder 3</div>
+
+  </div>
+
 </body>
 </html>

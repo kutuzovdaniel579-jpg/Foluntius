@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoL-Nuntius</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #1e1f22;
+      color: white;
+    }
+    #loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 2em;
+      background-color: #2b2d31;
+    }
+    #login {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    #login input {
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    #login button {
+      padding: 10px 20px;
+      background-color: #5865f2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">FoL-Nuntius laden...</div>
+
+  <div id="login">
+    <h2>Log in bij FoL-Nuntius</h2>
+    <input type="text" placeholder="Gebruikersnaam" id="username" />
+    <input type="password" placeholder="Wachtwoord" id="password" />
+    <button onclick="login()">Inloggen</button>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("login").style.display = "flex";
+    }, 5000);
+
+    function login() {
+      // Simpele login check (geen echte auth)
+      const user = document.getElementById("username").value;
+      if (user.trim() !== "") {
+        window.location.href = "/@me";
+      } else {
+        alert("Vul een gebruikersnaam in.");
+      }
+    }
+  </script>
+</body>
+</html>

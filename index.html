@@ -75,4 +75,28 @@
   </div>
 
 </body>
+<script>
+async function login() {
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch("./user.json");
+  const data = await res.json();
+
+  const user = data.users.find(u => u.username === username);
+
+  if (!user) {
+    alert("Gebruiker bestaat niet.");
+    return;
+  }
+
+  if (user.password !== password) {
+    alert("Wachtwoord klopt niet.");
+    return;
+  }
+
+  // Succesvolle login
+  window.location.href = "https://kutuzovdaniel579-jpg.github.io/Foluntius/@me";
+}
+</script>
 </html>

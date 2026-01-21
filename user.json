@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "FoL",
+      "password": "fol2",
+      "created_at": "21-01-2026T00:00:000"
+    },
+    {
+      "id": "2",
+      "username": "Harald Man",
+      "password": "demo123",
+      "created_at": "21-01-2026T00:00:001"
+    }
+  ]
+}
